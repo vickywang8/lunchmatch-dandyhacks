@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/create', function(req, res, next){
-    res.render('create', { title: 'Create Your Schedule'});
+    res.render('schedule', { title: 'Create Your Schedule'});
 });
 
 router.get('/how', function(req, res, next){
@@ -18,12 +18,12 @@ router.get('/how', function(req, res, next){
 router.post('/create', function(req, res){
     console.log(req.body);
     var newUser = new User({
-        name: {
+        /*name: {
             first: req.body.firstname,
             last: req.body.lastname
         },
         email: req.body.email,
-        password: req.body.password,
+        password: req.body.password,*/
         a1: req.body.a1,
         a2: req.body.a2,
         a3: req.body.a3,
