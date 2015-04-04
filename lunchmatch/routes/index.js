@@ -11,6 +11,10 @@ router.get('/create', function(req, res, next){
     res.render('create', { title: 'Create Your Schedule'});
 });
 
+router.get('/how', function(req, res, next){
+    res.render('howTo', { title: 'How To'});
+})
+
 router.post('/create', function(req, res){
     console.log(req.body);
     var newUser = new User({
