@@ -11,6 +11,11 @@ var users = require('./routes/users');
 var app = express();
 var app = express();
 
+//mongoose setup
+var mongoose = require('mongoose');
+//mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/lunchmatch');
+mongoose.connect('mongodb://lunchmatch:coverboys42@dbh13.mongolab.com:27137/lunchmatch');
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');

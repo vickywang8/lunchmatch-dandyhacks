@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<style type="text/css">
+    label {
+        font-size: 12px;
+        font-family: Verdana;
+    }
+    td {
+        font-size: 12px;
+        font-family: Verdana;
+    }
+
+    .radio {
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+        margin: 0px;
+    }
+
+    .blah {
+        text-decoration: line-through;
+    }
+</style>
+
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Schedule</title>
+</head>
+<body>
+<form id="scheduleForm" action="/create" method="POST">
+    <table>
+        <tr>
+            <td>
+                <label>9-10 AM</label>
+            </td>
+            <td>
+                <input type="radio" name="a1" value="Yes">Yes<br>
+            </td>
+            <td>
+                <input type="radio" name="a1" value="No" checked> No<br>
+            </td>
+            <td>
+                <input type="radio" name="a1" value="Maybe">  Maybe<br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>10-11 AM</label>
+            </td>
+            <td>
+                <input type="radio" name="a2" value="Yes">Yes<br>
+            </td>
+            <td>
+                <input type="radio" name="a2" value="No" checked> No<br>
+            </td>
+            <td>
+                <input type="radio" name="a2" value="Maybe">  Maybe<br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>11-12 AM</label>
+            </td>
+            <td>
+                <input type="radio" name="a3" value="Yes">Yes<br>
+            </td>
+            <td>
+                <input type="radio" name="a3" value="No" checked> No<br>
+            </td>
+            <td>
+                <input type="radio" name="a3" value="Maybe">  Maybe<br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>12-1 PM</label>
+            </td>
+            <td>
+                <input type="radio" name="a4" value="Yes">Yes<br>
+            </td>
+            <td>
+                <input type="radio" name="a4" value="No" checked> No<br>
+            </td>
+            <td>
+                <input type="radio" name="a4" value="Maybe">  Maybe<br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>1-2 PM</label>
+            </td>
+            <td>
+                <input type="radio" name="a5" value="Yes">Yes<br>
+            </td>
+            <td>
+                <input type="radio" name="a5" value="No" checked> No<br>
+            </td>
+            <td>
+                <input type="radio" name="a5" value="Maybe">  Maybe<br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>2-3 PM</label>
+            </td>
+            <td>
+                <input type="radio" name="a6" value="Yes">Yes<br>
+            </td>
+            <td>
+                <input type="radio" name="a6" value="No" checked> No<br>
+            </td>
+            <td>
+                <input type="radio" name="a6" value="Maybe">  Maybe<br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>3-4 PM</label>
+            </td>
+            <td>
+                <input type="radio" name="a7" value="Yes">Yes<br>
+            </td>
+            <td>
+                <input type="radio" name="a7" value="No" checked> No<br>
+            </td>
+            <td>
+                <input type="radio" name="a7" value="Maybe">  Maybe<br>
+            </td>
+        </tr>
+    </table>
+    <input type="submit" id="submit" value="Create">
+</form>
+
+</body>
+</html>
