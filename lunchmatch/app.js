@@ -4,6 +4,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var session = require('express-session');
+var methodOverride = require('method-override');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -13,6 +15,14 @@ var app = express();
 //mongoose setup
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://lunchmatch:coverboys42@dbh13.mongolab.com:27137/lunchmatch');
+// var mongo = require('mongodb').MongoClient;
+/*var uri = 'mongodb://lunchmatch:coverboys42@dbh13.mongolab.com:27137/lunchmatch';
+mongo.connect(uri, function(err, db){
+    if(err) {
+        console.log('Error: unable to connect to the database');
+        return;
+    }
+})*/
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -24,6 +34,9 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(session({ secret: 'secret' }));
+app.use(methodOverride());
+app.use(require('stylus').middleware({ src: __dirname + 'public' }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
